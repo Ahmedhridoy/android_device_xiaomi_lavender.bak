@@ -24,11 +24,23 @@
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/lavender/device.mk)
 
-# Inherit some common Arrow stuff
-$(call inherit-product, vendor/arrow/config/common.mk)
+# Inherit some common aosp stuff
+TARGET_INCLUDE_PIXEL_CHARGER := true
+TARGET_USES_BLUR := false
+DEVICE_MAINTAINER := Apex_Not_Legend
+# Inherit some common PixelExperience stuff
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Call recording
+TARGET_SUPPORTS_CALL_RECORDING := true
+# Quick tap
+TARGET_SUPPORTS_QUICK_TAP := true
+#Extra_Flags
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Device identifier
-PRODUCT_NAME := arrow_lavender
+PRODUCT_NAME := aosp_lavender
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_PLATFORM := SDM660
 PRODUCT_DEVICE := lavender
