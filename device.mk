@@ -64,6 +64,10 @@ PRODUCT_COPY_FILES += \
 # Properties 
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/properties/product.prop
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Keylayout
 PRODUCT_COPY_FILES += \
 	$(DEVICE_PATH)/configs/keylayout/sdm660-snd-card_Button_Jack.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/sdm660-snd-card_Button_Jack.kl
