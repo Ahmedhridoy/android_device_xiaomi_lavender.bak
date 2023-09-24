@@ -32,6 +32,9 @@ DEVICE_PATH := device/xiaomi/lavender
 # DT2W
 TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
 
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
+
 # Density
 TARGET_SCREEN_DENSITY := 420
 
