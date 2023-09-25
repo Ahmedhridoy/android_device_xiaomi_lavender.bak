@@ -45,6 +45,10 @@ BOARD_HAVE_IR := true
 # Device properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/properties/vendor.prop
 
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/partitions/flash_super_dummy.sh:install/bin/flash_super_dummy.sh
+
 # FM
 BOARD_HAVE_QCOM_FM := true
 
